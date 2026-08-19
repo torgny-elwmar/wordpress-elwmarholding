@@ -2,14 +2,14 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Elwmar Holding AB 3.0.2\n"
+"Project-Id-Version: Elwmar Holding AB 3.0.3\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/elwmarholding\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-08-19T08:51:57+00:00\n"
+"POT-Creation-Date: 2026-08-19T12:40:31+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: elwmarholding\n"
@@ -17,6 +17,7 @@ msgstr ""
 #. Theme Name of the theme
 #. Author of the theme
 #: style.css
+#: functions.php:607
 msgid "Elwmar Holding AB"
 msgstr ""
 
@@ -32,20 +33,18 @@ msgid "The content-independent WordPress block theme for elwmarholding.se, imple
 msgstr ""
 
 #: functions.php:57
-#: functions.php:522
-#: functions.php:656
+msgid "Start"
+msgstr ""
+
+#: functions.php:58
+#: functions.php:569
+#: functions.php:731
 #: patterns/header.php:23
 msgid "Om oss"
 msgstr ""
 
-#: functions.php:58
-#: patterns/header.php:24
-msgid "Verksamheter"
-msgstr ""
-
 #: functions.php:59
-#: patterns/header.php:25
-msgid "Insikter"
+msgid "Nyheter"
 msgstr ""
 
 #: functions.php:60
@@ -60,198 +59,201 @@ msgstr ""
 msgid "Huvudmeny"
 msgstr ""
 
-#: functions.php:189
-msgid "Välj språk"
-msgstr ""
-
+#: functions.php:195
 msgid "Svenska"
 msgstr ""
 
+#: functions.php:202
 msgid "English"
 msgstr ""
 
+#: functions.php:218
+msgid "Välj språk"
+msgstr ""
+
 #. translators: %s: Language name.
-#: functions.php:210
+#: functions.php:239
 #, php-format
 msgid "%s – översättning saknas"
 msgstr ""
 
 #. translators: %s: Link to the plugin installer.
-#: functions.php:277
+#: functions.php:310
 #, php-format
 msgid "Elwmar Holding AB är förberett för språkval. Installera och konfigurera <a href=\"%s\">Polylang</a> för att skapa översatta sidor och visa språkväxlaren."
 msgstr ""
 
-#: functions.php:475
-#: functions.php:525
-#: patterns/header.php:30
+#: functions.php:522
+#: functions.php:572
 msgid "Kontakta oss"
 msgstr ""
 
-#: functions.php:523
-#: functions.php:657
+#: functions.php:570
+#: functions.php:732
 msgid "Integritet"
 msgstr ""
 
-#: functions.php:524
-#: functions.php:658
+#: functions.php:571
+#: functions.php:733
 msgid "RSS-flöde"
 msgstr ""
 
-#: functions.php:531
+#: functions.php:578
 msgid "Kontakt, företagsinformation och sociala medier"
 msgstr ""
 
 #. translators: %s: Name of the social network or footer destination.
-#: functions.php:544
+#: functions.php:591
 #, php-format
 msgid "%s – länk läggs till senare"
 msgstr ""
 
-#: functions.php:621
-#: functions.php:644
-msgid "Elwmar Holding AB – temainställningar"
-msgstr ""
-
-#: functions.php:622
-msgid "Temainställningar"
-msgstr ""
-
-#: functions.php:647
-msgid "Företagslänkar"
-msgstr ""
-
-#: functions.php:648
-msgid "Lämna en webbadress tom för att använda WordPress automatiska mål för sidan eller flödet."
-msgstr ""
-
-#: functions.php:651
-msgid "E-postadress"
-msgstr ""
-
-msgid "Organisationsnummer"
-msgstr ""
-
 #. translators: %s: Company registration number.
+#: functions.php:612
 #, php-format
 msgid "Organisationsnummer: %s"
 msgstr ""
 
+#: functions.php:692
+#: functions.php:715
+msgid "Elwmar Holding AB – temainställningar"
+msgstr ""
+
+#: functions.php:693
+msgid "Temainställningar"
+msgstr ""
+
+#: functions.php:718
+msgid "Företagslänkar"
+msgstr ""
+
+#: functions.php:719
+msgid "Lämna en webbadress tom för att använda WordPress automatiska mål för sidan eller flödet."
+msgstr ""
+
+#: functions.php:722
+msgid "E-postadress"
+msgstr ""
+
+#: functions.php:726
+msgid "Organisationsnummer"
+msgstr ""
+
 #. translators: %s: Automatically selected destination URL.
-#: functions.php:666
+#: functions.php:741
 #, php-format
 msgid "Automatiskt mål: %s"
 msgstr ""
 
-#: functions.php:671
+#: functions.php:746
 msgid "Sociala profiler"
 msgstr ""
 
-#: functions.php:672
+#: functions.php:747
 msgid "En tom adress visar ikonen i foten utan att göra den klickbar."
 msgstr ""
 
-#: functions.php:733
+#: functions.php:808
 msgid "Formuläret kunde inte verifieras. Ladda om sidan och försök igen."
 msgstr ""
 
-#: functions.php:736
+#: functions.php:811
 msgid "Ange ditt namn."
 msgstr ""
 
-#: functions.php:739
+#: functions.php:814
 msgid "Ange en giltig e-postadress."
 msgstr ""
 
-#: functions.php:742
+#: functions.php:817
 msgid "Företagsnamnet är för långt."
 msgstr ""
 
-#: functions.php:745
+#: functions.php:820
 msgid "Meddelandet behöver innehålla mellan 10 och 5 000 tecken."
 msgstr ""
 
 #. translators: %s: Name entered in the contact form.
-#: functions.php:750
+#: functions.php:825
 #, php-format
 msgid "Ny kontaktförfrågan från %s"
 msgstr ""
 
 #. translators: %s: Name entered in the contact form.
-#: functions.php:755
+#: functions.php:830
 #, php-format
 msgid "Namn: %s"
 msgstr ""
 
 #. translators: %s: Email address entered in the contact form.
-#: functions.php:757
+#: functions.php:832
 #, php-format
 msgid "E-post: %s"
 msgstr ""
 
 #. translators: %s: Company entered in the contact form, or a translated fallback.
-#: functions.php:759
+#: functions.php:834
 #, php-format
 msgid "Företag: %s"
 msgstr ""
 
 #. translators: %s: Company entered in the contact form, or a translated fallback.
-#: functions.php:759
+#: functions.php:834
 msgid "Ej angivet"
 msgstr ""
 
-#: functions.php:761
+#: functions.php:836
 msgid "Meddelande:"
 msgstr ""
 
-#: functions.php:771
+#: functions.php:846
 msgid "Meddelandet kunde inte skickas just nu. Vänta en liten stund och försök igen."
 msgstr ""
 
-#: functions.php:783
+#: functions.php:858
 msgid "Tack!"
 msgstr ""
 
-#: functions.php:784
+#: functions.php:859
 msgid "Ditt meddelande är skickat. Vi återkommer så snart vi kan."
 msgstr ""
 
-#: functions.php:790
+#: functions.php:865
 msgid "Kontrollera formuläret:"
 msgstr ""
 
-#: functions.php:804
+#: functions.php:879
 msgid "Namn"
 msgstr ""
 
-#: functions.php:808
+#: functions.php:883
 msgid "E-post"
 msgstr ""
 
-#: functions.php:813
+#: functions.php:888
 msgid "Företag"
 msgstr ""
 
-#: functions.php:813
+#: functions.php:888
 msgid "frivilligt"
 msgstr ""
 
-#: functions.php:817
+#: functions.php:892
 msgid "Vad vill du ha hjälp med?"
 msgstr ""
 
-#: functions.php:821
+#: functions.php:896
 msgid "Lämna detta fält tomt"
 msgstr ""
 
 #. translators: %s: URL to the privacy page.
-#: functions.php:824
+#: functions.php:899
 #, php-format
 msgid "När du skickar formuläret behandlar vi uppgifterna för att besvara din förfrågan. Läs mer under <a href=\"%s\">Integritet</a>."
 msgstr ""
 
 #. translators: %s: URL to the privacy page.
-#: functions.php:825
+#: functions.php:900
 msgid "Skicka meddelande"
 msgstr ""
 
@@ -270,13 +272,8 @@ msgctxt "Pattern title"
 msgid "Footer"
 msgstr ""
 
-#: patterns/footer.php:13
-msgid "Till startsidan"
-msgstr ""
-
-#: patterns/footer.php:13
-#: patterns/header.php:14
-msgid "Elwmar Holding"
+#: patterns/footer.php:17
+msgid "© Elwmar Holding AB"
 msgstr ""
 
 #: patterns/header.php
@@ -288,8 +285,12 @@ msgstr ""
 msgid "Elwmar Holding AB – startsida"
 msgstr ""
 
-#: patterns/header.php:14
-msgid "Est. 2020"
+#: patterns/header.php:24
+msgid "Verksamheter"
+msgstr ""
+
+#: patterns/header.php:25
+msgid "Insikter"
 msgstr ""
 
 #: patterns/hidden-404.php

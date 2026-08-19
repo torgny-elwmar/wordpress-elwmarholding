@@ -200,6 +200,16 @@ function elwmarholding_provision_remove_starter_content(): void {
 		wp_delete_post( $page->ID, true );
 		elwmarholding_provision_log( "Removed WordPress starter page {$slug}." );
 	}
+
+	$starter_post = get_page_by_path( 'hello-world', OBJECT, 'post' );
+	if ( $starter_post instanceof WP_Post && 'Hello world!' === $starter_post->post_title ) {
+		if ( ELWMARHOLDING_PROVISION_DRY_RUN ) {
+			elwmarholding_provision_log( 'Would remove WordPress starter post hello-world.' );
+		} else {
+			wp_delete_post( $starter_post->ID, true );
+			elwmarholding_provision_log( 'Removed WordPress starter post hello-world.' );
+		}
+	}
 }
 
 /** Remove obsolete, unprovisioned navigation posts after replacements exist. */
@@ -233,6 +243,7 @@ $home_sv = <<<'HTML'
 <!-- wp:group {"className":"ga-hero__lead","layout":{"type":"flex","flexWrap":"wrap","justifyContent":"space-between","verticalAlignment":"center"}} --><div class="wp-block-group ga-hero__lead"><!-- wp:paragraph --><p>Elwmar Holding samlar och utvecklar bolag med en gedigen grund. Vårt ägarskap är långsiktigt, vår metod är strukturerad och vårt hantverk är noggrant.</p><!-- /wp:paragraph -->
 <!-- wp:buttons --><div class="wp-block-buttons"><!-- wp:button --><div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="/om-oss/">Läs om oss</a></div><!-- /wp:button --><!-- wp:button {"className":"is-style-outline"} --><div class="wp-block-button is-style-outline"><a class="wp-block-button__link wp-element-button" href="/kontakt/">Kontakta oss</a></div><!-- /wp:button --></div><!-- /wp:buttons --></div><!-- /wp:group --></div><!-- /wp:group --></div><!-- /wp:group -->
 <!-- wp:group {"align":"full","className":"ga-section","layout":{"type":"constrained"}} --><div class="wp-block-group alignfull ga-section"><!-- wp:group {"className":"section-heading","layout":{"type":"constrained"}} --><div class="wp-block-group section-heading"><!-- wp:paragraph {"className":"eyebrow"} --><p class="eyebrow">Vårt perspektiv</p><!-- /wp:paragraph --><!-- wp:heading --><h2 class="wp-block-heading">Långsiktigt ägande med tydlig riktning.</h2><!-- /wp:heading --><!-- wp:paragraph --><p>Vi tror på stabila verksamheter, yrkesskicklighet och beslut som håller över tid. Varje bolag ska få utvecklas på egna meriter med stöd av en engagerad och ansvarsfull ägare.</p><!-- /wp:paragraph --></div><!-- /wp:group --></div><!-- /wp:group -->
+<!-- wp:group {"align":"full","className":"ga-section news-section","layout":{"type":"constrained"}} --><div class="wp-block-group alignfull ga-section news-section"><!-- wp:group {"className":"section-heading","layout":{"type":"constrained"}} --><div class="wp-block-group section-heading"><!-- wp:paragraph {"className":"eyebrow"} --><p class="eyebrow">Aktuellt</p><!-- /wp:paragraph --><!-- wp:heading --><h2 class="wp-block-heading">Nyheter</h2><!-- /wp:heading --></div><!-- /wp:group --><!-- wp:query {"queryId":21,"query":{"perPage":3,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":false}} --><div class="wp-block-query"><!-- wp:post-template {"layout":{"type":"default"}} --><!-- wp:group {"layout":{"type":"flex","flexWrap":"wrap","justifyContent":"space-between","verticalAlignment":"center"}} --><div class="wp-block-group"><!-- wp:post-title {"isLink":true,"level":3} /--><!-- wp:post-date {"format":"j F Y"} /--></div><!-- /wp:group --><!-- /wp:post-template --><!-- wp:query-no-results --><!-- wp:paragraph --><p>Inga nyheter är publicerade ännu.</p><!-- /wp:paragraph --><!-- /wp:query-no-results --></div><!-- /wp:query --><!-- wp:paragraph {"className":"news-section__more"} --><p class="news-section__more"><a href="/nyheter/">Läs mer...</a></p><!-- /wp:paragraph --></div><!-- /wp:group -->
 HTML;
 
 $home_en = <<<'HTML'
@@ -243,6 +254,15 @@ $home_en = <<<'HTML'
 <!-- wp:group {"className":"ga-hero__lead","layout":{"type":"flex","flexWrap":"wrap","justifyContent":"space-between","verticalAlignment":"center"}} --><div class="wp-block-group ga-hero__lead"><!-- wp:paragraph --><p>Elwmar Holding brings together and develops companies with solid foundations. Our ownership is long-term, our approach is structured and our craft is meticulous.</p><!-- /wp:paragraph -->
 <!-- wp:buttons --><div class="wp-block-buttons"><!-- wp:button --><div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="/en/about-us/">About us</a></div><!-- /wp:button --><!-- wp:button {"className":"is-style-outline"} --><div class="wp-block-button is-style-outline"><a class="wp-block-button__link wp-element-button" href="/en/contact/">Contact us</a></div><!-- /wp:button --></div><!-- /wp:buttons --></div><!-- /wp:group --></div><!-- /wp:group --></div><!-- /wp:group -->
 <!-- wp:group {"align":"full","className":"ga-section","layout":{"type":"constrained"}} --><div class="wp-block-group alignfull ga-section"><!-- wp:group {"className":"section-heading","layout":{"type":"constrained"}} --><div class="wp-block-group section-heading"><!-- wp:paragraph {"className":"eyebrow"} --><p class="eyebrow">Our perspective</p><!-- /wp:paragraph --><!-- wp:heading --><h2 class="wp-block-heading">Long-term ownership with a clear direction.</h2><!-- /wp:heading --><!-- wp:paragraph --><p>We believe in stable businesses, professional expertise and decisions that stand the test of time. Each company should develop on its own merits with the support of an engaged and responsible owner.</p><!-- /wp:paragraph --></div><!-- /wp:group --></div><!-- /wp:group -->
+<!-- wp:group {"align":"full","className":"ga-section news-section","layout":{"type":"constrained"}} --><div class="wp-block-group alignfull ga-section news-section"><!-- wp:group {"className":"section-heading","layout":{"type":"constrained"}} --><div class="wp-block-group section-heading"><!-- wp:paragraph {"className":"eyebrow"} --><p class="eyebrow">Latest</p><!-- /wp:paragraph --><!-- wp:heading --><h2 class="wp-block-heading">News</h2><!-- /wp:heading --></div><!-- /wp:group --><!-- wp:query {"queryId":22,"query":{"perPage":3,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":false}} --><div class="wp-block-query"><!-- wp:post-template {"layout":{"type":"default"}} --><!-- wp:group {"layout":{"type":"flex","flexWrap":"wrap","justifyContent":"space-between","verticalAlignment":"center"}} --><div class="wp-block-group"><!-- wp:post-title {"isLink":true,"level":3} /--><!-- wp:post-date {"format":"j F Y"} /--></div><!-- /wp:group --><!-- /wp:post-template --><!-- wp:query-no-results --><!-- wp:paragraph --><p>No news has been published yet.</p><!-- /wp:paragraph --><!-- /wp:query-no-results --></div><!-- /wp:query --><!-- wp:paragraph {"className":"news-section__more"} --><p class="news-section__more"><a href="/en/news/">Read more...</a></p><!-- /wp:paragraph --></div><!-- /wp:group -->
+HTML;
+
+$news_sv = <<<'HTML'
+<!-- wp:group {"className":"news-page","layout":{"type":"constrained"}} --><div class="wp-block-group news-page"><!-- wp:paragraph {"className":"eyebrow"} --><p class="eyebrow">Aktuellt</p><!-- /wp:paragraph --><!-- wp:paragraph {"fontSize":"lg"} --><p class="has-lg-font-size">Nyheter och uppdateringar från Elwmar Holding.</p><!-- /wp:paragraph --><!-- wp:query {"queryId":23,"query":{"perPage":10,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":false}} --><div class="wp-block-query"><!-- wp:post-template {"layout":{"type":"default"}} --><!-- wp:group {"layout":{"type":"constrained"}} --><div class="wp-block-group"><!-- wp:post-date {"format":"j F Y"} /--><!-- wp:post-title {"isLink":true,"level":2} /--><!-- wp:post-excerpt {"moreText":"Läs mer..."} /--></div><!-- /wp:group --><!-- /wp:post-template --><!-- wp:query-no-results --><!-- wp:paragraph --><p>Inga nyheter är publicerade ännu.</p><!-- /wp:paragraph --><!-- /wp:query-no-results --><!-- wp:query-pagination {"layout":{"type":"flex","justifyContent":"center"}} --><!-- wp:query-pagination-previous /--><!-- wp:query-pagination-numbers /--><!-- wp:query-pagination-next /--><!-- /wp:query-pagination --></div><!-- /wp:query --></div><!-- /wp:group -->
+HTML;
+
+$news_en = <<<'HTML'
+<!-- wp:group {"className":"news-page","layout":{"type":"constrained"}} --><div class="wp-block-group news-page"><!-- wp:paragraph {"className":"eyebrow"} --><p class="eyebrow">Latest</p><!-- /wp:paragraph --><!-- wp:paragraph {"fontSize":"lg"} --><p class="has-lg-font-size">News and updates from Elwmar Holding.</p><!-- /wp:paragraph --><!-- wp:query {"queryId":24,"query":{"perPage":10,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":false}} --><div class="wp-block-query"><!-- wp:post-template {"layout":{"type":"default"}} --><!-- wp:group {"layout":{"type":"constrained"}} --><div class="wp-block-group"><!-- wp:post-date {"format":"j F Y"} /--><!-- wp:post-title {"isLink":true,"level":2} /--><!-- wp:post-excerpt {"moreText":"Read more..."} /--></div><!-- /wp:group --><!-- /wp:post-template --><!-- wp:query-no-results --><!-- wp:paragraph --><p>No news has been published yet.</p><!-- /wp:paragraph --><!-- /wp:query-no-results --><!-- wp:query-pagination {"layout":{"type":"flex","justifyContent":"center"}} --><!-- wp:query-pagination-previous /--><!-- wp:query-pagination-numbers /--><!-- wp:query-pagination-next /--><!-- /wp:query-pagination --></div><!-- /wp:query --></div><!-- /wp:group -->
 HTML;
 
 $about_sv = <<<'HTML'
@@ -333,9 +353,13 @@ try {
 			'sv' => array( 'post_title' => 'Kontakta oss', 'post_name' => 'kontakt', 'post_content' => $contact_sv, 'menu_order' => 20 ),
 			'en' => array( 'post_title' => 'Contact us', 'post_name' => 'contact', 'post_content' => $contact_en, 'menu_order' => 20 ),
 		),
+		'news' => array(
+			'sv' => array( 'post_title' => 'Nyheter', 'post_name' => 'nyheter', 'post_content' => $news_sv, 'menu_order' => 20 ),
+			'en' => array( 'post_title' => 'News', 'post_name' => 'news', 'post_content' => $news_en, 'menu_order' => 20 ),
+		),
 		'privacy' => array(
-			'sv' => array( 'post_title' => 'Integritetspolicy', 'post_name' => 'integritet', 'post_content' => $privacy_sv, 'menu_order' => 30 ),
-			'en' => array( 'post_title' => 'Privacy policy', 'post_name' => 'privacy-policy', 'post_content' => $privacy_en, 'menu_order' => 30 ),
+			'sv' => array( 'post_title' => 'Integritetspolicy', 'post_name' => 'integritet', 'post_content' => $privacy_sv, 'menu_order' => 40 ),
+			'en' => array( 'post_title' => 'Privacy policy', 'post_name' => 'privacy-policy', 'post_content' => $privacy_en, 'menu_order' => 40 ),
 		),
 	);
 
@@ -365,6 +389,7 @@ try {
 		array(
 			array( 'label' => 'Start', 'url' => (string) pll_home_url( 'sv' ) ),
 			array( 'label' => 'Om oss', 'url' => elwmarholding_provision_permalink( $pages['about']['sv'] ) ),
+			array( 'label' => 'Nyheter', 'url' => elwmarholding_provision_permalink( $pages['news']['sv'] ) ),
 			array( 'label' => 'Kontakta oss', 'url' => elwmarholding_provision_permalink( $pages['contact']['sv'] ) ),
 		)
 	);
@@ -374,6 +399,7 @@ try {
 		array(
 			array( 'label' => 'Home', 'url' => (string) pll_home_url( 'en' ) ),
 			array( 'label' => 'About us', 'url' => elwmarholding_provision_permalink( $pages['about']['en'] ) ),
+			array( 'label' => 'News', 'url' => elwmarholding_provision_permalink( $pages['news']['en'] ) ),
 			array( 'label' => 'Contact us', 'url' => elwmarholding_provision_permalink( $pages['contact']['en'] ) ),
 		)
 	);

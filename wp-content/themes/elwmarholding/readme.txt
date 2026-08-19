@@ -5,7 +5,7 @@ Contributors: elwmarholding
 Requires at least: 6.4
 Tested up to: 7.0
 Requires PHP: 8.0
-Stable tag: 3.0.2
+Stable tag: 3.0.3
 License: GNU General Public License v2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -41,6 +41,12 @@ The header language selector uses Polylang and appears when at least two languag
 4. Create and maintain pages, posts, navigation and site settings in WordPress; the theme contains presentation only
 
 == Changelog ==
+
+= 3.0.3 =
+* Restored the blurred navigation backdrop while keeping the drawer panel opaque.
+* Normalised page backgrounds and aligned the home-page perspective section.
+* Added reusable styles for the bilingual news index and home-page headlines.
+* Simplified the footer copyright line.
 
 = 3.0.2 =
 * Removed the conflicting drawer fade and blur layers.

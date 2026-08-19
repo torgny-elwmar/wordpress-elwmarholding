@@ -10,7 +10,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'ELWMARHOLDING_VERSION', '3.0.2' );
+define( 'ELWMARHOLDING_VERSION', '3.0.3' );
 define( 'ELWMARHOLDING_DIR', get_template_directory() );
 define( 'ELWMARHOLDING_URI', get_template_directory_uri() );
 
@@ -54,9 +54,9 @@ add_action( 'after_setup_theme', 'elwmarholding_setup' );
  */
 function elwmarholding_default_navigation_content(): string {
 	$links = array(
+		array( 'label' => __( 'Start', 'elwmarholding' ), 'url' => home_url( '/' ) ),
 		array( 'label' => __( 'Om oss', 'elwmarholding' ), 'url' => home_url( '/om-oss/' ) ),
-		array( 'label' => __( 'Verksamheter', 'elwmarholding' ), 'url' => home_url( '/verksamheter/' ) ),
-		array( 'label' => __( 'Insikter', 'elwmarholding' ), 'url' => home_url( '/blog/' ) ),
+		array( 'label' => __( 'Nyheter', 'elwmarholding' ), 'url' => home_url( '/nyheter/' ) ),
 		array( 'label' => __( 'Kontakt', 'elwmarholding' ), 'url' => home_url( '/kontakt/' ) ),
 	);
 	$content = '';
