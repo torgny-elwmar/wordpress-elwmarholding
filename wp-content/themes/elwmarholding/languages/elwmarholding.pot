@@ -1,0 +1,597 @@
+# Copyright (C) 2026 Elwmar Holding AB
+# This file is distributed under the GNU General Public License v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Elwmar Holding AB 3.0.2\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/elwmarholding\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-08-19T08:51:57+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: elwmarholding\n"
+
+#. Theme Name of the theme
+#. Author of the theme
+#: style.css
+msgid "Elwmar Holding AB"
+msgstr ""
+
+#. Theme URI of the theme
+#. Author URI of the theme
+#: style.css
+msgid "https://elwmarholding.se"
+msgstr ""
+
+#. Description of the theme
+#: style.css
+msgid "The content-independent WordPress block theme for elwmarholding.se, implementing the Elwmar Holding visual identity."
+msgstr ""
+
+#: functions.php:57
+#: functions.php:522
+#: functions.php:656
+#: patterns/header.php:23
+msgid "Om oss"
+msgstr ""
+
+#: functions.php:58
+#: patterns/header.php:24
+msgid "Verksamheter"
+msgstr ""
+
+#: functions.php:59
+#: patterns/header.php:25
+msgid "Insikter"
+msgstr ""
+
+#: functions.php:60
+#: patterns/header.php:26
+msgid "Kontakt"
+msgstr ""
+
+#: functions.php:121
+#: functions.php:149
+#: patterns/header.php:20
+#: patterns/header.php:22
+msgid "Huvudmeny"
+msgstr ""
+
+#: functions.php:189
+msgid "Välj språk"
+msgstr ""
+
+msgid "Svenska"
+msgstr ""
+
+msgid "English"
+msgstr ""
+
+#. translators: %s: Language name.
+#: functions.php:210
+#, php-format
+msgid "%s – översättning saknas"
+msgstr ""
+
+#. translators: %s: Link to the plugin installer.
+#: functions.php:277
+#, php-format
+msgid "Elwmar Holding AB är förberett för språkval. Installera och konfigurera <a href=\"%s\">Polylang</a> för att skapa översatta sidor och visa språkväxlaren."
+msgstr ""
+
+#: functions.php:475
+#: functions.php:525
+#: patterns/header.php:30
+msgid "Kontakta oss"
+msgstr ""
+
+#: functions.php:523
+#: functions.php:657
+msgid "Integritet"
+msgstr ""
+
+#: functions.php:524
+#: functions.php:658
+msgid "RSS-flöde"
+msgstr ""
+
+#: functions.php:531
+msgid "Kontakt, företagsinformation och sociala medier"
+msgstr ""
+
+#. translators: %s: Name of the social network or footer destination.
+#: functions.php:544
+#, php-format
+msgid "%s – länk läggs till senare"
+msgstr ""
+
+#: functions.php:621
+#: functions.php:644
+msgid "Elwmar Holding AB – temainställningar"
+msgstr ""
+
+#: functions.php:622
+msgid "Temainställningar"
+msgstr ""
+
+#: functions.php:647
+msgid "Företagslänkar"
+msgstr ""
+
+#: functions.php:648
+msgid "Lämna en webbadress tom för att använda WordPress automatiska mål för sidan eller flödet."
+msgstr ""
+
+#: functions.php:651
+msgid "E-postadress"
+msgstr ""
+
+msgid "Organisationsnummer"
+msgstr ""
+
+#. translators: %s: Company registration number.
+#, php-format
+msgid "Organisationsnummer: %s"
+msgstr ""
+
+#. translators: %s: Automatically selected destination URL.
+#: functions.php:666
+#, php-format
+msgid "Automatiskt mål: %s"
+msgstr ""
+
+#: functions.php:671
+msgid "Sociala profiler"
+msgstr ""
+
+#: functions.php:672
+msgid "En tom adress visar ikonen i foten utan att göra den klickbar."
+msgstr ""
+
+#: functions.php:733
+msgid "Formuläret kunde inte verifieras. Ladda om sidan och försök igen."
+msgstr ""
+
+#: functions.php:736
+msgid "Ange ditt namn."
+msgstr ""
+
+#: functions.php:739
+msgid "Ange en giltig e-postadress."
+msgstr ""
+
+#: functions.php:742
+msgid "Företagsnamnet är för långt."
+msgstr ""
+
+#: functions.php:745
+msgid "Meddelandet behöver innehålla mellan 10 och 5 000 tecken."
+msgstr ""
+
+#. translators: %s: Name entered in the contact form.
+#: functions.php:750
+#, php-format
+msgid "Ny kontaktförfrågan från %s"
+msgstr ""
+
+#. translators: %s: Name entered in the contact form.
+#: functions.php:755
+#, php-format
+msgid "Namn: %s"
+msgstr ""
+
+#. translators: %s: Email address entered in the contact form.
+#: functions.php:757
+#, php-format
+msgid "E-post: %s"
+msgstr ""
+
+#. translators: %s: Company entered in the contact form, or a translated fallback.
+#: functions.php:759
+#, php-format
+msgid "Företag: %s"
+msgstr ""
+
+#. translators: %s: Company entered in the contact form, or a translated fallback.
+#: functions.php:759
+msgid "Ej angivet"
+msgstr ""
+
+#: functions.php:761
+msgid "Meddelande:"
+msgstr ""
+
+#: functions.php:771
+msgid "Meddelandet kunde inte skickas just nu. Vänta en liten stund och försök igen."
+msgstr ""
+
+#: functions.php:783
+msgid "Tack!"
+msgstr ""
+
+#: functions.php:784
+msgid "Ditt meddelande är skickat. Vi återkommer så snart vi kan."
+msgstr ""
+
+#: functions.php:790
+msgid "Kontrollera formuläret:"
+msgstr ""
+
+#: functions.php:804
+msgid "Namn"
+msgstr ""
+
+#: functions.php:808
+msgid "E-post"
+msgstr ""
+
+#: functions.php:813
+msgid "Företag"
+msgstr ""
+
+#: functions.php:813
+msgid "frivilligt"
+msgstr ""
+
+#: functions.php:817
+msgid "Vad vill du ha hjälp med?"
+msgstr ""
+
+#: functions.php:821
+msgid "Lämna detta fält tomt"
+msgstr ""
+
+#. translators: %s: URL to the privacy page.
+#: functions.php:824
+#, php-format
+msgid "När du skickar formuläret behandlar vi uppgifterna för att besvara din förfrågan. Läs mer under <a href=\"%s\">Integritet</a>."
+msgstr ""
+
+#. translators: %s: URL to the privacy page.
+#: functions.php:825
+msgid "Skicka meddelande"
+msgstr ""
+
+#: patterns/archive-content.php
+msgctxt "Pattern title"
+msgid "Archive content"
+msgstr ""
+
+#: patterns/contact-page.php
+msgctxt "Pattern title"
+msgid "Contact page"
+msgstr ""
+
+#: patterns/footer.php
+msgctxt "Pattern title"
+msgid "Footer"
+msgstr ""
+
+#: patterns/footer.php:13
+msgid "Till startsidan"
+msgstr ""
+
+#: patterns/footer.php:13
+#: patterns/header.php:14
+msgid "Elwmar Holding"
+msgstr ""
+
+#: patterns/header.php
+msgctxt "Pattern title"
+msgid "Header"
+msgstr ""
+
+#: patterns/header.php:14
+msgid "Elwmar Holding AB – startsida"
+msgstr ""
+
+#: patterns/header.php:14
+msgid "Est. 2020"
+msgstr ""
+
+#: patterns/hidden-404.php
+msgctxt "Pattern title"
+msgid "404 content"
+msgstr ""
+
+#: patterns/hidden-404.php:10
+msgid "Felsväng"
+msgstr ""
+
+#: patterns/hidden-404.php:11
+msgid "404 — Sidan hittades inte"
+msgstr ""
+
+#: patterns/hidden-404.php:12
+msgid "Sidan du söker finns inte längre, eller har fått en ny adress. Vi hjälper dig tillbaka på rätt spår."
+msgstr ""
+
+#: patterns/hidden-404.php:13
+msgid "Sök på webbplatsen"
+msgstr ""
+
+#: patterns/hidden-404.php:13
+#: patterns/search-content.php:10
+msgid "Sök"
+msgstr ""
+
+#: patterns/hidden-404.php:14
+msgid "← Tillbaka till startsidan"
+msgstr ""
+
+#: patterns/insights-home.php
+msgctxt "Pattern title"
+msgid "Insights index"
+msgstr ""
+
+#: patterns/insights-home.php:12
+msgid "Senaste nytt"
+msgstr ""
+
+#: patterns/insights-home.php:13
+msgid "Insikter."
+msgstr ""
+
+#: patterns/insights-home.php:14
+msgid "Perspektiv, nyheter och konkreta erfarenheter om strategi, innovation och genomförande."
+msgstr ""
+
+#: patterns/insights-home.php:25
+msgid "Läs insikten →"
+msgstr ""
+
+#: patterns/insights-home.php:30
+msgid "Fler insikter är på väg."
+msgstr ""
+
+#: patterns/insights-home.php:31
+msgid "Nyare insikter"
+msgstr ""
+
+#: patterns/insights-home.php:31
+msgid "Äldre insikter"
+msgstr ""
+
+#: patterns/post-loop.php
+msgctxt "Pattern title"
+msgid "Post loop"
+msgstr ""
+
+#: patterns/post-loop.php:14
+#: patterns/search-content.php:15
+msgid "Läs mer →"
+msgstr ""
+
+#: patterns/post-loop.php:17
+msgid "Inga inlägg hittades"
+msgstr ""
+
+#: patterns/post-loop.php:17
+msgid "Det verkar inte finnas något här. Försök gärna igen senare."
+msgstr ""
+
+#: patterns/posts-index.php
+msgctxt "Pattern title"
+msgid "Posts index"
+msgstr ""
+
+#: patterns/search-content.php
+msgctxt "Pattern title"
+msgid "Search content"
+msgstr ""
+
+#: patterns/search-content.php:10
+msgid "Ny sökning"
+msgstr ""
+
+#: patterns/search-content.php:13
+msgid "Inga resultat hittades för din sökning. Försök med andra sökord."
+msgstr ""
+
+#: patterns/single-content.php
+msgctxt "Pattern title"
+msgid "Single post content"
+msgstr ""
+
+#: patterns/single-content.php:18
+msgid "← Föregående"
+msgstr ""
+
+#: patterns/single-content.php:18
+msgid "Nästa →"
+msgstr ""
+
+#: assets/js/theme.js:30
+msgid "Öppna meny"
+msgstr ""
+
+#: assets/js/theme.js:34
+msgid "Stäng meny"
+msgstr ""
+
+#: assets/js/theme.js:39
+msgid "Hoppa till innehåll"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Walnut"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Deep Charcoal"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Pale Taupe"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Taupe"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Charcoal Green"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Chalk"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Surface"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Deep Charcoal Text"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Muted Olive"
+msgstr ""
+
+#: theme.json
+msgctxt "Color name"
+msgid "Taupe Line"
+msgstr ""
+
+#: theme.json
+msgctxt "Gradient name"
+msgid "Deep Charcoal to Green"
+msgstr ""
+
+#: theme.json
+msgctxt "Gradient name"
+msgid "Chalk to Pale Taupe"
+msgstr ""
+
+#: theme.json
+msgctxt "Font family name"
+msgid "Inter"
+msgstr ""
+
+#: theme.json
+msgctxt "Font family name"
+msgid "Fraunces"
+msgstr ""
+
+#: theme.json
+msgctxt "Font family name"
+msgid "Yellowtail"
+msgstr ""
+
+#: theme.json
+msgctxt "Font family name"
+msgid "Mono"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "XS"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Small"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Base"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Medium"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "Large"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "XL"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "2XL"
+msgstr ""
+
+#: theme.json
+msgctxt "Font size name"
+msgid "3XL"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "1"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "2"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "3"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "4"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "5"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "6"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "7"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "8"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "9"
+msgstr ""
+
+#: theme.json
+msgctxt "Space size name"
+msgid "10"
+msgstr ""
+
+#: theme.json
+msgctxt "Template part name"
+msgid "Header"
+msgstr ""
+
+#: theme.json
+msgctxt "Template part name"
+msgid "Footer"
+msgstr ""

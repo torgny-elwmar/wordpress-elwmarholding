@@ -1,0 +1,16 @@
+{
+  "devDependencies": {
+    "@wordpress/env": "^11.13.0"
+  },
+  "scripts": {
+    "start": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/start-dev.ps1",
+    "stop": "wp-env stop",
+    "status": "wp-env status",
+    "reset": "wp-env reset all",
+    "destroy": "wp-env destroy",
+    "plugin:check": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/update-plugin.ps1 -CheckOnly",
+    "plugin:update": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/update-plugin.ps1",
+    "sync:prod": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/sync-prod.ps1",
+    "sync:prod:full": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/sync-prod.ps1 -IncludeUploads"
+  }
+}

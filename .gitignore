@@ -1,0 +1,6 @@
+wp-content/uploads/
+wp-content/themes/elwmarholding/.dev-admin-password.tmp
+wp-content/themes/elwmarholding/.set-dev-admin-password.tmp.sh
+node_modules/
+.wp-env.override.json
+.dev/
