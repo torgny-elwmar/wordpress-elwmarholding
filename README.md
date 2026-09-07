@@ -111,6 +111,8 @@ Sitens avsändaradress, avsändarnamn, SMTP-värd, port och kryptering finns i `
 
 Generell användning och Compose-konfiguration finns i `wp-content/mu-plugins/smtp2go-mailer/README.md`. Domänen och avsändaradressen måste vara verifierade hos SMTP2GO innan ett leveranstest görs.
 
+Kontaktformulärets spamskydd i `wp-content/mu-plugins/contact-form-protection.php` kräver ingen extern tjänst eller API-nyckel. Det kombinerar formulärets WordPress-nonce och honeypot med server-signaturerad minsta ifyllnadstid och rate limiting per e-postadress och klient-IP. Pluginets API och delning mellan systersajterna beskrivs i `wp-content/mu-plugins/contact-form-protection/README.md`.
+
 ## Synka från produktion
 
 > [!WARNING]
