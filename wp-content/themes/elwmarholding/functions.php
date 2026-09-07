@@ -800,8 +800,10 @@ function elwmarholding_contact_form_shortcode(): string {
 		$values['message'] = isset( $_POST['ga_contact_message'] ) ? sanitize_textarea_field( wp_unslash( $_POST['ga_contact_message'] ) ) : '';
 		$honeypot          = isset( $_POST['ga_contact_website'] ) ? trim( (string) wp_unslash( $_POST['ga_contact_website'] ) ) : '';
 		$nonce             = isset( $_POST['_ga_contact_nonce'] ) ? sanitize_text_field( wp_unslash( $_POST['_ga_contact_nonce'] ) ) : '';
+		$started_at        = isset( $_POST['contact_form_started_at'] ) ? sanitize_text_field( wp_unslash( $_POST['contact_form_started_at'] ) ) : '';
+		$signature         = isset( $_POST['contact_form_signature'] ) ? sanitize_text_field( wp_unslash( $_POST['contact_form_signature'] ) ) : '';
 
-		if ( $honeypot ) {
+		if ( Elwmar_Contact_Form_Protection::is_automated( 'elwmarholding', $honeypot, $started_at, $signature ) ) {
 			// Silently accept automated submissions without sending mail.
 			$success = true;
 		} elseif ( ! wp_verify_nonce( $nonce, 'elwmarholding_contact' ) ) {
@@ -820,7 +822,10 @@ function elwmarholding_contact_form_shortcode(): string {
 				$errors['message'] = __( 'Meddelandet behöver innehålla mellan 10 och 5 000 tecken.', 'elwmarholding' );
 			}
 
-			if ( ! $errors ) {
+			if ( ! $errors && Elwmar_Contact_Form_Protection::is_rate_limited( 'elwmarholding', $values['email'] ) ) {
+				$success = true;
+				$values  = array_fill_keys( array_keys( $values ), '' );
+			} elseif ( ! $errors ) {
 				/* translators: %s: Name entered in the contact form. */
 				$subject = sprintf( __( 'Ny kontaktförfrågan från %s', 'elwmarholding' ), $values['name'] );
 				$body    = implode(
@@ -874,6 +879,7 @@ function elwmarholding_contact_form_shortcode(): string {
 		<?php if ( ! $success ) : ?>
 			<form class="ga-contact-form" method="post" action="#kontaktformular">
 				<?php wp_nonce_field( 'elwmarholding_contact', '_ga_contact_nonce' ); ?>
+				<?php echo Elwmar_Contact_Form_Protection::fields( 'elwmarholding' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
 				<div class="ga-contact-form__grid">
 					<div class="ga-form-field">
 						<label for="ga-contact-name"><?php esc_html_e( 'Namn', 'elwmarholding' ); ?> <span aria-hidden="true">*</span></label>
